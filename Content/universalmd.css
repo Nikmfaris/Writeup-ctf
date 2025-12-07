@@ -1,0 +1,501 @@
+/* ============================================
+   UNIVERSAL MARKDOWN STYLES FOR CTF WRITEUPS
+   ============================================ */
+
+/* Color Variables for Light and Dark Mode */
+:root {
+    --primary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+    --secondary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+}
+
+html[data-theme="light"] {
+    --bg-primary: #F4F4F4;
+    --bg-secondary: #e8e8e8;
+    --bg-gradient: linear-gradient(135deg, #F4F4F4 0%, #e8e8e8 100%);
+    --text-primary: #222831;
+    --text-secondary: #444444;
+    --text-light: #666666;
+    --card-shadow: 0 10px 30px rgba(34, 40, 49, 0.12);
+    --card-shadow-hover: 0 20px 40px rgba(34, 40, 49, 0.2);
+    --border-color: #d0d0d0;
+    --button-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+    --link-color: #222831;
+    --link-hover: #444444;
+    --code-bg: #e8e8e8;
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #222831;
+    --bg-secondary: #2d3139;
+    --bg-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --text-light: #999999;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --card-shadow-hover: 0 20px 40px rgba(34, 40, 49, 0.8);
+    --border-color: #3a3f47;
+    --button-gradient: linear-gradient(135deg, #222831 0%, #1a1f26 100%);
+    --link-color: #e0e0e0;
+    --link-hover: #ffffff;
+    --code-bg: #1a1f26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 6px 16px rgba(34, 40, 49, 0.3);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   MARKDOWN CONTENT STYLES
+   ============================================ */
+
+.markdown-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+.markdown-content h1 {
+    font-size: 2.5rem;
+    margin: 30px 0 20px;
+    color: var(--text-primary);
+    border-bottom: 3px solid var(--link-color);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.markdown-content h2 {
+    font-size: 2rem;
+    margin: 25px 0 15px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.markdown-content h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+    margin: 15px 0 10px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Paragraphs */
+.markdown-content p {
+    margin: 15px 0;
+    color: var(--text-primary);
+    line-height: 1.8;
+}
+
+/* Links */
+.markdown-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.markdown-content a:hover {
+    color: var(--link-hover);
+    border-bottom-color: var(--link-hover);
+}
+
+/* Code blocks */
+.markdown-content code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    border: 1px solid var(--border-color);
+}
+
+.markdown-content pre {
+    background: var(--code-bg);
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-left: 4px solid var(--link-color);
+    box-shadow: var(--card-shadow);
+}
+
+.markdown-content pre code {
+    background: transparent;
+    padding: 0;
+    color: var(--text-primary);
+    border: none;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Lists */
+.markdown-content ul,
+.markdown-content ol {
+    margin: 15px 0 15px 30px;
+    color: var(--text-primary);
+}
+
+.markdown-content li {
+    margin: 8px 0;
+    line-height: 1.8;
+}
+
+.markdown-content ul li::marker {
+    color: var(--link-color);
+}
+
+.markdown-content ol li::marker {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+    border-left: 4px solid var(--link-color);
+    padding: 15px 20px;
+    margin: 20px 0;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Tables */
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: var(--card-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.markdown-content table th {
+    background: var(--link-color);
+    color: var(--bg-primary);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.markdown-content table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.markdown-content table tr:last-child td {
+    border-bottom: none;
+}
+
+.markdown-content table tr:hover {
+    background: var(--bg-secondary);
+}
+
+/* Horizontal rule */
+.markdown-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--link-color), transparent);
+    margin: 30px 0;
+}
+
+/* Images */
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin: 20px 0;
+    display: block;
+}
+
+/* Strong and emphasis */
+.markdown-content strong {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.markdown-content em {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .markdown-content {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .markdown-content {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .markdown-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .markdown-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .markdown-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .markdown-content pre {
+        padding: 15px;
+        font-size: 0.85em;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .markdown-content {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .markdown-content h1 {
+        font-size: 1.5rem;
+        margin: 20px 0 15px;
+    }
+
+    .markdown-content h2 {
+        font-size: 1.2rem;
+        margin: 15px 0 10px;
+    }
+
+    .markdown-content h3 {
+        font-size: 1rem;
+    }
+
+    .markdown-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .markdown-content code {
+        font-size: 0.85em;
+        padding: 2px 4px;
+    }
+
+    .markdown-content pre {
+        padding: 12px;
+        font-size: 0.8em;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .markdown-content pre code {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    .markdown-content table {
+        font-size: 0.9rem;
+        margin: 15px 0;
+    }
+
+    .markdown-content table th,
+    .markdown-content table td {
+        padding: 8px;
+    }
+
+    .markdown-content ul,
+    .markdown-content ol {
+        margin: 12px 0 12px 20px;
+    }
+
+    .markdown-content li {
+        margin: 6px 0;
+        font-size: 0.95rem;
+    }
+
+    .markdown-content blockquote {
+        padding: 12px 15px;
+        margin: 15px 0;
+        font-size: 0.95rem;
+    }
+
+    .markdown-content img {
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 5px;
+    }
+
+    .markdown-content {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .markdown-content h1 {
+        font-size: 1.3rem;
+        margin: 15px 0 10px;
+    }
+
+    .markdown-content h2 {
+        font-size: 1.1rem;
+        margin: 12px 0 8px;
+    }
+
+    .markdown-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .markdown-content p {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .markdown-content code {
+        font-size: 0.8em;
+        padding: 1px 3px;
+    }
+
+    .markdown-content pre {
+        padding: 10px;
+        font-size: 0.75em;
+        margin: 12px 0;
+        border-radius: 4px;
+    }
+
+    .markdown-content table {
+        font-size: 0.8rem;
+        margin: 12px 0;
+    }
+
+    .markdown-content table th,
+    .markdown-content table td {
+        padding: 6px;
+    }
+
+    .markdown-content ul,
+    .markdown-content ol {
+        margin: 10px 0 10px 15px;
+        padding-left: 5px;
+    }
+
+    .markdown-content li {
+        margin: 4px 0;
+        font-size: 0.9rem;
+    }
+
+    .markdown-content blockquote {
+        padding: 10px 12px;
+        margin: 12px 0;
+        font-size: 0.9rem;
+    }
+
+    .markdown-content img {
+        margin: 12px 0;
+        border-radius: 4px;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        top: 8px;
+        right: 8px;
+    }
+}

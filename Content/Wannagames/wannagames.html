@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanaGames CTF WriteUp</title>
+    <link rel="stylesheet" href="../universalmd.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon">🌙</span>
+    </button>
+
+    <main class="markdown-content" id="content"></main>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        const toggleIcon = document.querySelector('.toggle-icon');
+
+        // Initialize theme on page load
+        function initializeTheme() {
+            // Check localStorage first, then system preference, then default to light
+            let theme = localStorage.getItem('theme');
+            
+            if (!theme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+            
+            applyTheme(theme);
+        }
+
+        // Apply theme to HTML element and update icon
+        function applyTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateToggleIcon(theme);
+        }
+
+        // Update toggle button icon based on theme
+        function updateToggleIcon(theme) {
+            toggleIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // Theme toggle click handler
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+        });
+
+        // Initialize on page load
+        initializeTheme();
+
+        // Load and parse markdown
+        fetch('wannagames.md')
+            .then(response => response.text())
+            .then(markdown => {
+                document.getElementById('content').innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                document.getElementById('content').innerHTML = '<p style="color: red;">Error loading markdown file: ' + error + '</p>';
+            });
+    </script>
+</body>
+</html>

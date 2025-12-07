@@ -1,0 +1,427 @@
+/* ============================================
+   CSS3 STYLING FOR CTF WRITEUPS WEBSITE
+   ============================================ */
+
+/* Color Variables for Light and Dark Mode */
+:root {
+    --primary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+    --secondary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+}
+
+html[data-theme="light"] {
+    --bg-primary: #F4F4F4;
+    --bg-secondary: #e8e8e8;
+    --bg-gradient: linear-gradient(135deg, #F4F4F4 0%, #e8e8e8 100%);
+    --text-primary: #222831;
+    --text-secondary: #444444;
+    --text-light: #666666;
+    --card-shadow: 0 10px 30px rgba(34, 40, 49, 0.12);
+    --card-shadow-hover: 0 20px 40px rgba(34, 40, 49, 0.2);
+    --border-color: #d0d0d0;
+    --button-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #222831;
+    --bg-secondary: #2d3139;
+    --bg-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --text-light: #999999;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --card-shadow-hover: 0 20px 40px rgba(34, 40, 49, 0.8);
+    --border-color: #3a3f47;
+    --button-gradient: linear-gradient(135deg, #222831 0%, #1a1f26 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 6px 16px rgba(34, 40, 49, 0.3);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+header {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 50px;
+    animation: slideDown 0.8s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   MAIN CONTENT & GRID LAYOUT
+   ============================================ */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.writeups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* ============================================
+   WRITEUP CARD STYLES
+   ============================================ */
+
+.writeup-card {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease-out forwards;
+    border: 1px solid var(--border-color);
+}
+
+.writeup-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Card Image with Semi-Blur Effect */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #222831 0%, #1a1f26 100%);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px) brightness(0.95);
+    transition: all 0.4s ease;
+}
+
+.writeup-card:hover .card-image img {
+    filter: blur(1px) brightness(1);
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.writeup-card:hover .card-content h2 {
+    color: #222831;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Button Style */
+.btn-read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--button-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    width: fit-content;
+}
+
+.btn-read-more:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(34, 40, 49, 0.4);
+}
+
+.btn-read-more:active {
+    transform: translateX(2px);
+}
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+
+footer {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.writeup-card:nth-child(1) { animation-delay: 0.1s; }
+.writeup-card:nth-child(2) { animation-delay: 0.2s; }
+.writeup-card:nth-child(3) { animation-delay: 0.3s; }
+.writeup-card:nth-child(4) { animation-delay: 0.4s; }
+.writeup-card:nth-child(5) { animation-delay: 0.5s; }
+.writeup-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .writeups-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .writeups-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    .writeups-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .btn-read-more {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        top: 10px;
+        right: 10px;
+    }
+
+    footer {
+        padding: 30px 15px 15px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .writeups-container {
+        gap: 12px;
+        padding: 0px;
+    }
+
+    .card-image {
+        height: 120px;
+    }
+
+    .card-content {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .card-content h2 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .btn-read-more {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 8px;
+        right: 8px;
+    }
+}
