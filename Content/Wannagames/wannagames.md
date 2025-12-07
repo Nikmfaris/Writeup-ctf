@@ -16,7 +16,7 @@ In this challenge, you are given an image and need to identify a specific locati
 
 ### Challenge Image
 
-<img src="/Asset/wannagames/wanderer.jpg" alt="Wanderer's Snapshot" width="400" height="300">
+<img src="./Asset/wannagames/wanderer.jpg" alt="Wanderer's Snapshot" width="400" height="300">
 
 ### Solution Steps
 
@@ -30,7 +30,7 @@ When you examine the image closely, zoom in on the background. There are several
 
 #### Step 2: Identify Clue 1
 
-<img src="/Asset/wannagames/clue1.png" alt="Clue 1" width="350" height="250">
+<img src="./Asset/wannagames/clue1.png" alt="Clue 1" width="350" height="250">
 
 **Analysis:**
 - This location correlates with **Riyadh Season**, an annual event held in Saudi Arabia
@@ -39,7 +39,7 @@ When you examine the image closely, zoom in on the background. There are several
 
 #### Step 3: Gather Additional Information
 
-<img src="/Asset/wannagames/info1.png" alt="Information 1" width="350" height="250">
+<img src="./Asset/wannagames/info1.png" alt="Information 1" width="350" height="250">
 
 **Key findings:**
 - The event location is linked to Riyadh, Saudi Arabia
