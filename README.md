@@ -1,6 +1,8 @@
+# Oblong
+iono y u read this, anyhow , have a gud day man 
 
 
+### dancer dancer sekalian
 
-# oblong
-## siddiq
-###### sdp
+
+[<--->  👾 🗿 presss 🦦 meeee 🎲 🪐 <--->](https://nikmfaris.github.io/Writeup-ctf/)
