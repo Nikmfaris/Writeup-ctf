@@ -1,14 +1,19 @@
 # WanaGames CTF WriteUp
 
-## Challenge Overview
+ 
+
+
+
+
+## Misc - Wanderer's Snapshot
+
+
+### Challenge Overview
 
 **Type:** Miscellaneous  
-**Difficulty:** Ezpz  
-
+**Difficulty:** Ezpz 
 
 ---
-
-## Challenge 1: Wanderer's Snapshot
 
 ### Description
 
@@ -47,4 +52,9 @@ When you examine the image closely, zoom in on the background. There are several
 - The unique cactus species and environmental features narrow down the exact spot
 - Cross-reference with event venue locations
 
-#### Step 4: Identify Clue 2
+
+
+
+
+
+## forensic - knock-knock

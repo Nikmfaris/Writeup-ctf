@@ -12,7 +12,24 @@
         <span class="toggle-icon">🌙</span>
     </button>
 
+    <aside class="toc-sidebar" id="tocSidebar">
+        <h3>Contents</h3>
+        <nav id="tocNav"></nav>
+    </aside>
+
     <main class="markdown-content" id="content"></main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="https://github.com/Nikmfaris" class="footer-link" target="_blank" rel="noopener noreferrer">
+                
+                <span class="footer-text">&copy; 2025 CTF WriteUps by kudegulong.</span>
+                
+            </a>
+        </div>
+    </footer>
+
+      
 
     <script>
         // Theme Toggle Functionality
@@ -60,10 +77,43 @@
             .then(response => response.text())
             .then(markdown => {
                 document.getElementById('content').innerHTML = marked.parse(markdown);
+                generateTableOfContents();
             })
             .catch(error => {
                 document.getElementById('content').innerHTML = '<p style="color: red;">Error loading markdown file: ' + error + '</p>';
             });
+
+        // Generate table of contents from h2 headings
+        function generateTableOfContents() {
+            const content = document.getElementById('content');
+            const tocNav = document.getElementById('tocNav');
+            const headings = content.querySelectorAll('h2');
+            
+            headings.forEach((heading, index) => {
+                // Create ID for heading if it doesn't have one
+                if (!heading.id) {
+                    heading.id = `challenge-${index}`;
+                }
+                
+                // Extract just the challenge name (remove emoji)
+                let challengeName = heading.textContent.trim();
+                challengeName = challengeName.replace(/^🔍\s*/, '');
+                
+                // Create TOC link
+                const link = document.createElement('a');
+                link.href = `#${heading.id}`;
+                link.textContent = challengeName;
+                link.className = 'toc-link';
+                
+                // Smooth scroll on click
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+                
+                tocNav.appendChild(link);
+            });
+        }
     </script>
 </body>
 </html>

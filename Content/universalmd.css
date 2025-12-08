@@ -289,6 +289,98 @@ body {
 }
 
 /* ============================================
+   TABLE OF CONTENTS SIDEBAR
+   ============================================ */
+
+.toc-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 200px;
+    padding: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    z-index: 100;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.toc-sidebar h3 {
+    font-size: 0.9rem;
+    margin: 0 0 15px 0;
+    color: var(--text-secondary);
+    padding: 0;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.toc-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toc-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border-left: 2px solid transparent;
+    padding-left: 8px;
+}
+
+.toc-link:hover {
+    color: var(--text-primary);
+    border-left-color: var(--link-color);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+    margin-top: 40px;
+    padding: 20px 0 10px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.footer-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--link-color);
+    color: grey;
+}
+
+.footer-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.footer-text {
+    font-weight: 600;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
@@ -497,5 +589,9 @@ body {
         font-size: 0.9rem;
         top: 8px;
         right: 8px;
+    }
+
+    .toc-sidebar {
+        display: none;
     }
 }

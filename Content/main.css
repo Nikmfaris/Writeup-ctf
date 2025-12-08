@@ -6,6 +6,11 @@
 :root {
     --primary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
     --secondary-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+
+    /* starfield shadows */
+    --stars-small: 769px 881px #FFF, 1165px 1022px #FFF, 1340px 1794px #FFF, 1088px 102px #FFF, 1808px 1535px #FFF, 1638px 154px #FFF, 1198px 1644px #FFF, 1701px 1014px #FFF, 1132px 1195px #FFF, 1415px 1811px #FFF, 1302px 1837px #FFF, 1900px 1607px #FFF, 1831px 1348px #FFF, 1395px 134px #FFF, 1020px 1122px #FFF, 1654px 810px #FFF, 1863px 1791px #FFF, 1887px 196px #FFF, 1401px 1314px #FFF, 1911px 1212px #FFF, 113px 1962px #FFF, 848px 1831px #FFF, 1724px 1413px #FFF, 1377px 231px #FFF, 379px 1323px #FFF, 1956px 1392px #FFF, 1181px 1730px #FFF, 1408px 642px #FFF, 1541px 1693px #FFF, 1815px 1609px #FFF, 1222px 1201px #FFF, 1955px 1739px #FFF, 433px 1551px #FFF, 1804px 1112px #FFF, 1021px 1584px #FFF, 1998px 703px #FFF, 1620px 1565px #FFF, 190px 1603px #FFF, 1534px 1518px #FFF, 1383px 321px #FFF, 1737px 1355px #FFF, 1409px 1347px #FFF, 1634px 1722px #FFF, 1734px 1467px #FFF, 153px 552px #FFF, 1918px 1448px #FFF, 1005px 1545px #FFF, 1546px 1238px #FFF, 1858px 1024px #FFF, 1036px 1702px #FFF, 162px 1736px #FFF;
+    --stars-medium: 1888px 312px #FFF, 1128px 1482px #FFF, 544px 974px #FFF, 446px 1046px #FFF, 792px 1757px #FFF, 912px 1433px #FFF, 1465px 1524px #FFF, 1087px 1405px #FFF, 1072px 170px #FFF, 1335px 1187px #FFF, 1639px 1590px #FFF, 899px 1485px #FFF, 1271px 1140px #FFF, 1376px 1677px #FFF, 1438px 1411px #FFF, 1238px 1242px #FFF, 1349px 1532px #FFF, 1826px 1180px #FFF, 1683px 1055px #FFF, 1636px 1455px #FFF, 1172px 1817px #FFF, 1066px 1427px #FFF, 953px 1421px #FFF, 1650px 1347px #FFF, 1432px 1340px #FFF, 1681px 1909px #FFF, 1503px 1418px #FFF, 1572px 1941px #FFF, 1712px 1507px #FFF, 1186px 1541px #FFF, 1407px 1913px #FFF, 1201px 1879px #FFF, 1378px 1031px #FFF, 1518px 1602px #FFF, 1553px 1287px #FFF, 1695px 1754px #FFF, 1610px 1850px #FFF, 1907px 1781px #FFF, 1794px 1827px #FFF, 1091px 1807px #FFF;
+    --stars-big: 503px 1545px #FFF, 1208px 1399px #FFF, 887px 1197px #FFF, 1762px 1755px #FFF, 1565px 1313px #FFF, 1392px 1501px #FFF, 1699px 1285px #FFF, 1726px 1522px #FFF, 1282px 1806px #FFF, 1446px 1425px #FFF, 1544px 1736px #FFF, 1586px 1742px #FFF, 1445px 1559px #FFF, 1219px 1492px #FFF, 1532px 1871px #FFF, 1374px 1716px #FFF, 1907px 1720px #FFF, 1701px 1785px #FFF, 1649px 1907px #FFF, 1184px 1644px #FFF, 1428px 1921px #FFF, 1521px 1320px #FFF, 1643px 1756px #FFF, 1576px 1508px #FFF, 1406px 1803px #FFF, 1509px 1759px #FFF, 1487px 1714px #FFF, 1325px 1628px #FFF, 1722px 1479px #FFF, 1468px 1917px #FFF, 1498px 1507px #FFF, 1751px 1544px #FFF, 1479px 1784px #FFF, 1590px 1451px #FFF, 1440px 1739px #FFF, 1311px 1580px #FFF, 1697px 1623px #FFF, 1502px 1457px #FFF, 1604px 1822px #FFF, 1295px 1501px #FFF, 1412px 1754px #FFF, 1529px 1770px #FFF, 1621px 1758px #FFF, 1337px 1578px #FFF, 1506px 1918px #FFF, 1765px 1725px #FFF, 1512px 1779px #FFF, 1550px 1550px #FFF, 1680px 1764px #FFF, 1473px 1662px #FFF, 1744px 1805px #FFF, 1672px 1746px #FFF, 1539px 1607px #FFF, 1346px 1755px #FFF, 1618px 1776px #FFF, 1685px 1736px #FFF, 1443px 1668px #FFF, 1483px 1710px #FFF, 1644px 1618px #FFF, 1540px 1555px #FFF, 1459px 1588px #FFF, 1561px 1599px #FFF, 1500px 1655px #FFF, 1716px 1794px #FFF, 1629px 1552px #FFF, 1514px 1515px #FFF, 1698px 1734px #FFF, 1526px 1680px #FFF, 1662px 1792px #FFF, 1583px 1855px #FFF, 1435px 1820px #FFF, 1599px 1588px #FFF, 1370px 1679px #FFF, 1640px 1615px #FFF, 1525px 1669px #FFF, 1507px 1601px #FFF, 1588px 1675px #FFF, 1558px 1719px #FFF, 1439px 1689px #FFF, 1517px 1771px #FFF, 1556px 1672px #FFF, 1548px 1837px #FFF, 1605px 1701px #FFF, 1707px 1773px #FFF, 1658px 1821px #FFF, 1739px 1877px #FFF, 1592px 1745px #FFF, 1481px 1831px #FFF, 1677px 1844px #FFF, 1545px 1854px #FFF, 1641px 1809px #FFF, 1595px 1660px #FFF, 1476px 1769px #FFF, 1668px 1811px #FFF, 1622px 1761px #FFF, 1490px 1733px #FFF, 1655px 1840px #FFF, 1589px 1723px #FFF, 1687px 1782px #FFF, 1624px 1901px #FFF, 1496px 1786px #FFF, 1528px 1748px #FFF;
 }
 
 html[data-theme="light"] {
@@ -19,6 +24,12 @@ html[data-theme="light"] {
     --card-shadow-hover: 0 20px 40px rgba(34, 40, 49, 0.2);
     --border-color: #d0d0d0;
     --button-gradient: linear-gradient(135deg, #222831 0%, #222831 100%);
+
+    /* starfield toggles */
+    --stars-visible: block;
+
+    /* hide starfield in light mode */
+    --stars-visible: none;
 }
 
 html[data-theme="dark"] {
@@ -51,6 +62,83 @@ body {
     min-height: 100vh;
     padding: 20px;
     transition: background 0.3s ease, color 0.3s ease;
+}
+
+.page-shell {
+    position: relative;
+    z-index: 1;
+}
+
+.starfield {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.starfield-layer {
+    display: var(--stars-visible);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+}
+
+#stars {
+    box-shadow: var(--stars-small);
+    animation: animStar 50s linear infinite;
+}
+
+#stars::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: var(--stars-small);
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    box-shadow: var(--stars-medium);
+    animation: animStar 100s linear infinite;
+}
+
+#stars2::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: var(--stars-medium);
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    box-shadow: var(--stars-big);
+    animation: animStar 150s linear infinite;
+}
+
+#stars3::after {
+    content: "";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: var(--stars-big);
+}
+
+@keyframes animStar {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
 }
 
 /* ============================================
@@ -104,6 +192,7 @@ header {
 header h1 {
     font-size: 3rem;
     font-weight: 700;
+    font-family: 'Pixelify Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
     letter-spacing: 2px;
