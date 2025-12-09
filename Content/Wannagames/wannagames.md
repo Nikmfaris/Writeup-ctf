@@ -23,7 +23,7 @@ In this challenge, you are given an image and need to identify a specific locati
 
 ### Solution Steps
 
-#### Step 1: Analyze the Image
+####  Analyze the Image
 
 When you examine the image closely, zoom in on the background. There are several clues hidden in the scene:
 
@@ -52,7 +52,7 @@ When you examine the image closely, zoom in on the background. There are several
 <img src="../../Asset/wannagames/clue2.png" alt="Information 1" width="350" height="250">
 
 there is a pyramid at the background of the image.
-by comparing infomation from **Riyadh Season** event, the only place that have pyramid is **boulevard world**
+by comparing infomation from **Riyadh Season** event, the only place that has pyramid is **boulevard world**
 
 #### boom the flag
 
