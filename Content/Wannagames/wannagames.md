@@ -3,21 +3,19 @@
  
 
 
-
-
 ## Misc - Wanderer's Snapshot
 
 
 ### Challenge Overview
 
-**Type:** Miscellaneous  
+**Type:** Misc  
 **Difficulty:** Ezpz 
 
 ---
 
 ### Description
 
-In this challenge, you are given an image and need to identify a specific location based on visual clues. The image contains a cactus with a unique shape, but don't be deceived by obvious details.
+In this challenge, you are given an image and need to identify a specific location based on visual clues. The image contains a cactus with a unique shape, but don't be deceived by obvious details. **bro look at the cactus , very sussy**
 
 ### Challenge Image
 
@@ -33,28 +31,33 @@ When you examine the image closely, zoom in on the background. There are several
 - **Background details:** Look for landmarks or distinctive features
 - **Context clues:** Environmental indicators
 
-#### Step 2: Identify Clue 1
+####  Clue 1
 
 <img src="../../Asset/wannagames/clue1.png" alt="Clue 1" width="350" height="250">
 
-
-**Analysis:**
 - This location correlates with **Riyadh Season**, an annual event held in Saudi Arabia
 - The landscape and architecture suggest a Middle Eastern location
-- Specific landmarks can be identified from the background
 
-#### Step 3: Gather Additional Information
+#### Gather Additional Information
 
 <img src="../../Asset/wannagames/info1.png" alt="Information 1" width="350" height="250">
 
-**Key findings:**
+**findings:**
 - The event location is linked to Riyadh, Saudi Arabia
 - The unique cactus species and environmental features narrow down the exact spot
 - Cross-reference with event venue locations
 
 
+####  Clue 2
+<img src="../../Asset/wannagames/clue2.png" alt="Information 1" width="350" height="250">
+
+there is a pyramid at the background of the image.
+by comparing infomation from **Riyadh Season** event, the only place that have pyramid is **boulevard world**
+
+#### boom the flag
+
+<img src="../../Asset/wannagames/flag_wanderers.jpg" alt="Information 1" width="350" height="250">
 
 
 
-
-## forensic - knock-knock
+## Forensic - knock-knock
