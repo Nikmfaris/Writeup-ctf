@@ -58,6 +58,9 @@ by comparing infomation from **Riyadh Season** event, the only place that has py
 
 <img src="../../Asset/wannagames/flag_wanderers.jpg" alt="Information 1" width="350" height="250">
 
+---
 
+## Forensic - Where is the malware?
 
-## Forensic - knock-knock
+> [!NOTE]
+> The IT department received an urgent alert: an employee reported that all his important files had been encrypted without any clear cause. Most of the team gave up, assuming this might be a new, unknown attack vector. Now it’s your turn—investigate the root cause and help us recover the encrypted files.
